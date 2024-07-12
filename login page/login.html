@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+    <html>
+    <style>
+
+         
+    body {font-family: 'Times New Roman', Times, serif, Helvetica, sans-serif;}
+    * {box-sizing: border-box;}
+    body{                      
+       
+        color: rgb(242, 13, 13);
+    }
+    
+    h2::before {
+        content: "Login /";}
+    input[type=text], input[type=password] {
+      width: 100%;
+      padding: 15px;
+      margin: 5px 0 22px 0;
+      display: inline-block;
+      border:dashed;
+      border-color: rgb(252, 240, 15);
+      -webkit-text-fill-color: #df2f43;
+      background: #62b162;
+    }
+
+    input[type=text]:focus, input[type=password]:focus {
+      background-color: #1ce4e8;
+  
+    
+    }
+    
+    button {
+      background-color: hsla(337, 76%, 49%, 0.9);
+      color: rgb(22, 5, 5);
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      opacity: 0.9;
+    }
+    
+    button:hover {
+      opacity:3;
+    }
+    
+    .cancelbtn {
+      padding: 10px 20px;
+      background-color: #f5600a;
+      
+    }
+
+    .cancelbtn {
+      float: left;
+      
+      width: 50%;
+
+    }
+    .signupbtn{
+      padding: 10px 20px;
+      float:right;
+      width:50%;
+    }
+    
+
+    .container {
+      padding: 5px;
+    }
+    
+    .modal {
+      display: none; 
+      position: fixed; 
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%; 
+      overflow: auto;
+      background-color: #faf9fe;
+      padding-top: 50px;
+    }
+    
+  
+    .modal-content {
+     
+      margin: 5% auto 10% auto; 
+     
+      width: 80%; }
+    
+   
+   
+     
+     
+    .container{
+        background-image:url(https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&w=600) ;
+        background-position:center ;
+        color: rgb(29, 190, 21);
+        height: 500px;
+        width:500px;
+    }
+    
+    
+
+    
+  
+    
+    </style>
+    <body><center>
+      <fieldset><center>
+    
+    <h2>    Sign Up  </h2>
+    
+   
+    <button onclick="document.getElementById('id01').style.display='block'" ">Login</button>
+    
+    <div id="id01" class="modal">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <form class="modal-content" action="/action_page.php">
+        <div class="container">
+          
+          <h1>Login</h1>
+         
+         
+          
+         <h3> <label for="email"><b>Email</b></label>
+          <input type="text" placeholder="e-mail" name="email" required STYLE="color:  rgb(185, 121, 121); ">
+    
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="password" name="psw" required STYLE="color: rgb(36, 35, 34);">
+    
+   
+          
+          <label>
+            <input type="checkbox" unchecked="checked" name="remember" style="margin-bottom:15px"> Remember Me
+          </label>
+    
+          
+    
+          <div class="clearfix">
+            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+            <button type="button" class="signupbtn" onclick="redirectToGoogle()">Next</button>
+            
+
+                
+             </div>
+        </div>
+      </form>
+    </div>
+  </center></fieldset>
+    <script>
+      <div id="id01" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <p>Please fill out the text field!</p>
+  </div>
+</div>
+   
+      var modal = document.getElementById('id01');
+      
+      
+      window.onclick = function(event){
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+      
+      </script>
+    
+
+    
+          
+  </center>
+    
+    </body>
+    </html>
