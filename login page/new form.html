@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        BODY {
+            color: rgb(81, 30, 112);
+            background-color: rgba(12, 200, 169, 0.805);
+        }
+        form {
+            background-color: rgb(246, 118, 126);
+            border-color: black;
+        }
+        fieldset {
+            background-color: rgb(234, 234, 234);
+            border-color: black;
+        }
+    </style>
+</head>
+<body><center>
+    <h2>REGISTRATION FORM</h2>
+    <center>
+    <fieldset style="width: 400px;">
+        <legend>Personal Information 🩵</legend><br>
+        <form onsubmit="return validateForm()">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+            <br><br>
+            <label for="age">Age:</label>
+            <input type="number" id="age" required>
+            <br><br>
+            <label for="gender">Gender:</label>
+            <select id="gender" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+            <br><br>
+            <label for="email">Email Id:</label>
+            <input type="text" id="email" required>
+            <br><br>
+            <label for="city">City:</label>
+            <input list="city" name="city" id="city" required>
+            <datalist id="city">
+                <option value="CHENNAI">
+                <option value="SIVAKASI">
+                <option value="MADURAI">
+                <option value="KARUR">
+                <option value="COIMBATORE">
+            </datalist>
+            <br><br>
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" pattern="[0-9]{10}" required>
+            <br><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" pattern=".{6,}" required>
+            <br><br>
+            <center>
+                <button type="submit">Submit</button>
+            </center>
+        </form>
+    </fieldset>
+
+    <script>
+        function validateForm() {
+            var email = document.getElementById('email').value;
+            var emailPattern = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
+
+            if (!emailPattern.test(email)) {
+                 alert("Please enter a valid Gmail address.");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</body>
+</html>
